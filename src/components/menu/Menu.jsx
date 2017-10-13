@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './menu-styles.less';
 
 const Menu = () => (
     <nav>
-        <Link to="/">home</Link>
-        <Link to="/about">about</Link>
+        <NavLink to="/">home</NavLink>
+        <NavLink to="/about">about</NavLink>
     </nav>
 );
 

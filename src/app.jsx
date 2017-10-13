@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router';
+import { createBrowserHistory } from 'history';
 import FrontPage from './pages/frontPage/FrontPage';
 import About from './pages/about/About';
 import Menu from './components/menu/Menu';
 
+const history = createBrowserHistory();
+
 ReactDOM.render(
-    <Router>
+    <Router history={history}>
         <div>
             <Menu />
             <Route exact path="/" component={FrontPage} />
