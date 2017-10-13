@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './button.less';
 
 class Button extends Component {
     static propTypes = {
-        children: React.PropTypes.node.isRequired
+        children: PropTypes.node.isRequired
     };
 
     componentWillMount() {

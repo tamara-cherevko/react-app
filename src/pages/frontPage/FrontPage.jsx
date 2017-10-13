@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Button from '../../components/button/Button';
 
 class FrontPage extends Component {
     static propTypes = {
-        text: React.PropTypes.string.isRequired
+        text: PropTypes.string
     };
 
     static defaultProps = {

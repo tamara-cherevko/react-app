@@ -27,7 +27,7 @@ const baseConfig = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loader: 'react-hot-loader!babel-loader!eslint-loader'
+                loader: 'react-hot-loader/webpack!babel-loader!eslint-loader'
             },
             {
                 test: /\.less/,
