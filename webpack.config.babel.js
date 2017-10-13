@@ -1,12 +1,12 @@
 import webpack from 'webpack';
 import path from 'path';
-import _ from 'lodash';
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const APP_PATH = __dirname,
     DIST_PATH = path.join(APP_PATH, 'build'),
     FRONTEND_PATH = path.join(APP_PATH, 'src');
 
-const baseConfig = {
+export default {
     cache: true,
     entry: {
         index: path.join(FRONTEND_PATH, 'app.jsx')
@@ -44,6 +44,9 @@ const baseConfig = {
         ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html'
+        }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
@@ -51,5 +54,3 @@ const baseConfig = {
         })
     ]
 };
-
-export default baseConfig;
